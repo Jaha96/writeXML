@@ -20,4 +20,39 @@
     <au_lname>Sherlock</au_lname>
     <au_fname>Holmes</au_fname>
   </authors>
+  <authors>
+    <au_id>314</au_id>
+    <au_lname>Albert </au_lname>
+    <au_fname>Clown</au_fname>
+  </authors>
+  <authors>
+    <au_id>315</au_id>
+    <au_lname>Bat</au_lname>
+    <au_fname>Dorj</au_fname>
+  </authors>
+  <authors>
+    <au_id>316</au_id>
+    <au_lname>Dorj</au_lname>
+    <au_fname>Bat</au_fname>
+  </authors>
+  <authors>
+    <au_id>316</au_id>
+    <au_lname>Dorj</au_lname>
+    <au_fname>Bat</au_fname>
+  </authors>
+  <authors>
+    <au_id>317</au_id>
+    <au_lname>dd</au_lname>
+    <au_fname>kjh</au_fname>
+  </authors>
+  <authors>
+    <au_id>318</au_id>
+    <au_lname>asdf</au_lname>
+    <au_fname>kljlk</au_fname>
+  </authors>
+  <authors>
+    <au_id>319</au_id>
+    <au_lname>asdf</au_lname>
+    <au_fname>kljlk</au_fname>
+  </authors>
 </authorslist>

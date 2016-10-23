@@ -16,6 +16,11 @@ namespace WriteXML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Init();
+        }
+
+        public void Init()
+        {
             DataSet ds = new DataSet();
 
             if (Cache["mycache"] == null)
@@ -24,20 +29,16 @@ namespace WriteXML
                 lblMessage.Text = "Cache generated";
                 ds.ReadXml(Server.MapPath("Authors.xml"));
                 Cache.Insert("mycache", ds, new CacheDependency(Server.MapPath("Authors.xml")), DateTime.Now.AddSeconds(100), TimeSpan.Zero);
-                Init();
+                GridView1.DataSource = Cache["mycache"];
+                GridView1.DataBind();
             }
             else
             {
                 lblMessage.Visible = true;
                 lblMessage.Text = "Using regenerated version";
-                Init();
+                GridView1.DataSource = Cache["mycache"];
+                GridView1.DataBind();
             }
-        }
-
-        protected void Init()
-        {
-            GridView1.DataSource = Cache["mycache"];
-            GridView1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
