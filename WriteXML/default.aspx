@@ -39,7 +39,8 @@
                 </asp:TableRow>
                 
             </asp:Table>
-            <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click"  />
+            <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click"  /><br>
+            <asp:Label ID="lblMessage" Visible="false" runat="server" Text=""></asp:Label>
             <asp:GridView ID="GridView1" runat="server" ></asp:GridView>
          </div>
     </form>

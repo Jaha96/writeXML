@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Caching;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
@@ -16,14 +17,33 @@ namespace WriteXML
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds.ReadXml(Server.MapPath("Authors.xml"));
-            GridView1.DataSource = ds;
+
+            if (Cache["mycache"] == null)
+            {
+                lblMessage.Visible = true;
+                lblMessage.Text = "Cache generated";
+                ds.ReadXml(Server.MapPath("Authors.xml"));
+                Cache.Insert("mycache", ds, new CacheDependency(Server.MapPath("Authors.xml")), DateTime.Now.AddSeconds(100), TimeSpan.Zero);
+                Init();
+            }
+            else
+            {
+                lblMessage.Visible = true;
+                lblMessage.Text = "Using regenerated version";
+                Init();
+            }
+        }
+
+        protected void Init()
+        {
+            GridView1.DataSource = Cache["mycache"];
             GridView1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             writeXML();
+            Init();
         }
 
         protected void writeXML()
