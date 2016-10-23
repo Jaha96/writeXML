@@ -1,4 +1,4 @@
 # writeXML
-Laboratoriin daalgawar
+Laboratoriin daalgawar\n
 Энэ нь Веб програмчлал хичээлийн лабораторийн даалгавар бөгөөд XML-файлд өгөгдөл нэмж харуулахдаа Cache ашиглан харуулж байгаа. 
 Бас Ajax ашиглан хийсэн болно.
