@@ -1,0 +1,23 @@
+﻿#header {
+    height:67px;
+    padding: 0 0px 0 0px;
+    color:#ffffff;
+    background-color:#000000;
+    border-bottom: 8px solid:#d30a1a;
+}
+
+#sidebar {
+    float: left;
+    padding: 0 10px 10px 10px;
+    background-color: #656565;
+    border-top:  2px solid: #656565;
+    border-bottom: 2px solid: #656565;
+    width: 168px;
+    height: 500px;
+}
+
+#content {
+    margin-left: 210px;
+    padding: 0 20px 1.8em 10px;
+    background-color: #fff;
+}
