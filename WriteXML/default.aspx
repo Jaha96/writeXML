@@ -10,7 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div id="header"></div>
-        <div id="sidebar"></div>
+        <div id="sidebar">
+        </div>
         <div id="content">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -45,7 +46,8 @@
                 </asp:TableRow>
                 
             </asp:Table>
-            <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click"  /><br>
+            <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click"  />
+            <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button2_Click"/><br>
             <asp:Label ID="lblMessage" Visible="false" runat="server" Text=""></asp:Label>
             <asp:GridView ID="GridView1" runat="server" ></asp:GridView>
                     </ContentTemplate>
@@ -54,3 +56,8 @@
     </form>
 </body>
 </html>
+<script>
+    $("#txtSearch").onchange(function () {
+        $("#txtSearch").val('jaha');
+    });
+</script>

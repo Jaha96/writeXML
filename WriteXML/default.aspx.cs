@@ -86,5 +86,14 @@ namespace WriteXML
                 doc.Save(Server.MapPath("Authors.xml"));
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            
+            DataTable dtSales=new DataTable();
+            dtSales = (DataTable)GridView1.DataSource;
+            dtSales.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "au_id", txtID.Text);
+        
+        }
     }
 }
